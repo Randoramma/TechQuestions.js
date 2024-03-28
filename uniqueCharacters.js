@@ -4,7 +4,7 @@ console.log("Run Javascript");
 function hasRepeatedLetters(str) { 
     // setup Set requiring unique characters only.  
     const characterSet = new Set(); 
-    if (str.length > 256) return false; 
+    if (str.length > 256) return false; // this is O(1). 
     // for loop through the range of the input string 
     for (let i = 0; i < str.length; i++ ) { 
         const character = str[i]; 
@@ -25,6 +25,7 @@ console.log(hasRepeatedLetters("aardvark"));
 
 function hasUniqueCharacters(str) { 
 
+    if (str.length > 256) return false; // this is O(1). 
     const characterSet = new Set(str); // this is an O(n) function time complexity.  
 
     if (characterSet.size == str.length) { 
